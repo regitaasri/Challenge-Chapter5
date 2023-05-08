@@ -20,10 +20,6 @@ module.exports = {
         return Car.destroy({ where: { id } });
     },
 
-    permanentDelete(id) {
-        return Car.destroy({ where: { id }, force: true });
-    },
-
     find(id) {
         return Car.findByPk(id, { paranoid: false });
     },
