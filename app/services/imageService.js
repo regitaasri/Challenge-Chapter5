@@ -1,5 +1,4 @@
 const imageRepository = require("../repositories/imageRepository");
-const { cloudinary, config } = require("../../config/cloudinary")
 
 module.exports = {
     async upload(file) {
