@@ -2,23 +2,22 @@ const carService = require("../../../services/carService");
 
 module.exports = {
     list(req, res) {
-        carService
-            .list()
-            .then(({ data, count }) => {
-                res.status(200).json({
-                    status: "success",
-                    data,
-                    meta: { total: count },
-                });
-            })
-            .catch((err) => {
-                console.log(err);
-                res.status(500).json({
-                    status: "error",
-                    message: err.message,
-                });
-            });
-    },
+    postService
+      .list()
+      .then(({ data, count }) => {
+        res.status(200).json({
+          status: "OK",
+          data: { posts: data },
+          meta: { total: count },
+        });
+      })
+      .catch((err) => {
+        res.status(400).json({
+          status: "FAIL",
+          message: err.message,
+        });
+      });
+  },
 
     async show(req, res) {
         try {
