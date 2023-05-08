@@ -1,6 +1,7 @@
 const carRepository = require("../repositories/carRepository");
 const userRepository = require("../repositories/userRepository");
 const imageRepository = require("../repositories/imageRepository");
+const postRepository = require("../repositories/postRepository");
 
 
 const formatCarData = async (car) => {
