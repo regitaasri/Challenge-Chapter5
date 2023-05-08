@@ -2,7 +2,7 @@ const carService = require("../../../services/carService");
 
 module.exports = {
     list(req, res) {
-    postService
+    carService
       .list()
       .then(({ data, count }) => {
         res.status(200).json({
