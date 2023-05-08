@@ -62,10 +62,6 @@ module.exports = {
         ])
     },
 
-    async permanentDelete(id) {
-        return carRepository.permanentDelete(id);
-    },
-
     async listDeleted() {
         try {
             const cars = await carRepository.findAll();
